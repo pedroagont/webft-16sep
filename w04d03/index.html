@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AJAX 🎣</title>
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css" />
+
     <!-- External JS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -21,8 +24,11 @@
     <main>
       <section>
         <h2>My favorite pokemon</h2>
+        <code>GET https://pokeapi.co/api/v2/pokemon</code>
+        <br />
+        <br />
         <button id="get-pokemon-btn">Get pokemon!</button>
-        <ul id="pokemon-list">
+        <ul id="pokemon-list" class="pokemon-list">
           <li>pikachu</li>
           <li>charizard</li>
           <li>jigglypuff</li>
@@ -30,13 +36,19 @@
       </section>
 
       <section>
-        <form id="user-form">
-          <input type="text" name="firstName" />
-          <input type="text" name="lastName" />
-          <input type="email" name="email" />
-          <input type="password" name="password" />
+        <h2>Register form</h2>
+        <code>POST https://httpbin.org/post</code>
+        <br />
+        <br />
+        <form id="user-form" class="user-form">
+          <input type="text" name="firstName" placeholder="First name" />
+          <input type="text" name="lastName" placeholder="Last name" />
+          <input type="email" name="email" placeholder="your@email.com" />
+          <input type="password" name="password" placeholder="p4ssw0rd!" />
           <button>Submit</button>
         </form>
+        <h3>Response:</h3>
+        <div id="response" class="response"></div>
       </section>
     </main>
   </body>

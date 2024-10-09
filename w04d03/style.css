@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+.pokemon-list {
+  width: 150px;
+  height: 100px;
+  overflow: scroll;
+  border: 2px solid black;
+}
+
+.user-form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.response {
+  white-space: pre-wrap;
+}

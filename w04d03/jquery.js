@@ -14,3 +14,24 @@ const handleGetPokemonBtnClick = () => {
 };
 
 $('#get-pokemon-btn').click(handleGetPokemonBtnClick);
+
+const handleSubmitTodoNotesForm = (event) => {
+  event.preventDefault();
+  const { firstName, lastName, email, password } = event.target.elements;
+
+  const newUser = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    email: email.value,
+    password: password.value,
+  };
+
+  $.ajax({
+    method: 'POST',
+    url: 'https://httpbin.org/post',
+    dataType: 'JSON',
+    data: newUser,
+  }).then((data) => console.log(data));
+};
+
+$('#user-form').submit(handleSubmitTodoNotesForm);

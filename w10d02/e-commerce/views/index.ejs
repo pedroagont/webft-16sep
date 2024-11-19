@@ -21,6 +21,10 @@
         <ul class="product-list">
           <% for (const prod of products) { %>
           <li class="product-list-item">
+            <img
+              src="<%= prod.imgUrl || 'https://picsum.photos/200' %>"
+              alt="<%= prod.name %>"
+            />
             <h4><%= prod.name %></h4>
             <p><%= prod.price %></p>
             <button>Buy</button>

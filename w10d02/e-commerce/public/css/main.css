@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: royalblue;
+  color: white;
+}
+
+.header {
+  background-color: #ff6347;
+  padding: 2em;
+  color: black;
+}
+
+.header h1 {
+  text-shadow: 1px 1px 1px white;
+}
+
+.main {
+  width: 90%;
+  margin: 1em auto;
+}
+
+.product-list {
+  list-style: none;
+
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.product-list-item {
+  border: 2px solid white;
+  padding: 1em;
+  width: 200px;
+}

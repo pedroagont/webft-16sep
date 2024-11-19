@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta data -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My e-commerce!</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1>Welcome to my e-commerce!</h1>
       <p>Here are all my variety of products, hope you like them!</p>
     </header>
 
-    <main>
+    <main class="main">
       <section>
         <h2>My products</h2>
-        <!-- <ul>
-          <li>RokuTV</li>
-          <li>iPhone</li>
-          <li>SamsungTV</li>
-          <li>Smartwatch</li>
-        </ul> -->
-
-        <ul>
+        <ul class="product-list">
           <% for (const prod of products) { %>
-          <li>
-            <div>
-              <h4><%= prod.name %></h4>
-              <p><%= prod.price %></p>
-              <button>Buy</button>
-            </div>
+          <li class="product-list-item">
+            <h4><%= prod.name %></h4>
+            <p><%= prod.price %></p>
+            <button>Buy</button>
           </li>
           <% } %>
         </ul>

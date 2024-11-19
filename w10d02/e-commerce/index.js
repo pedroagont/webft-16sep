@@ -2,6 +2,31 @@
 const express = require('express');
 const morgan = require('morgan');
 
+const db = {
+  products: [
+    {
+      id: 1,
+      name: 'RokuTV',
+      price: 5000,
+    },
+    {
+      id: 2,
+      name: 'iPhone 15',
+      price: 5000,
+    },
+    {
+      id: 3,
+      name: 'SamsungTV',
+      price: 5000,
+    },
+    {
+      id: 4,
+      name: 'Smartwatch',
+      price: 5000,
+    },
+  ],
+};
+
 // SETUP & MIDDLEWARE
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -12,7 +37,10 @@ app.use(express.static('public'));
 
 // ROUTES
 app.get('/', (req, res) => {
-  res.render('index');
+  const templateVars = {
+    products: db.products,
+  };
+  res.render('index', templateVars);
 });
 
 app.get('/api/test', (req, res) => {

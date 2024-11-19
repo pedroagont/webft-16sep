@@ -6,6 +6,33 @@
     <title>My e-commerce!</title>
   </head>
   <body>
-    <h1>Hello!</h1>
+    <header>
+      <h1>Welcome to my e-commerce!</h1>
+      <p>Here are all my variety of products, hope you like them!</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>My products</h2>
+        <!-- <ul>
+          <li>RokuTV</li>
+          <li>iPhone</li>
+          <li>SamsungTV</li>
+          <li>Smartwatch</li>
+        </ul> -->
+
+        <ul>
+          <% for (const prod of products) { %>
+          <li>
+            <div>
+              <h4><%= prod.name %></h4>
+              <p><%= prod.price %></p>
+              <button>Buy</button>
+            </div>
+          </li>
+          <% } %>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>

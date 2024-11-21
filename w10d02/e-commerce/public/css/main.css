@@ -2,23 +2,25 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: royalblue;
+  background-color: lightskyblue;
   color: white;
 }
 
 .header {
-  background-color: #ff6347;
+  background-color: royalblue;
   padding: 2em;
-  color: black;
+  color: white;
+  text-align: center;
 }
 
 .header h1 {
-  text-shadow: 1px 1px 1px white;
+  text-shadow: 2px 2px 2px black;
 }
 
 .main {
   width: 90%;
-  margin: 1em auto;
+  margin: 2em auto;
+  text-shadow: 1px 1px 1px black;
 }
 
 .product-list {

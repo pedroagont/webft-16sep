@@ -8,6 +8,12 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css" />
+
+    <!-- External JS -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- Custom JS -->
+    <script defer src="/js/currency-formatter.js"></script>
   </head>
   <body>
     <header class="header">
@@ -26,8 +32,28 @@
               alt="<%= prod.name %>"
             />
             <h4><%= prod.name %></h4>
-            <p><%= prod.price %></p>
-            <button>Buy</button>
+            <p class="product-price"><%= prod.price %></p>
+            <form action="/api/checkout" method="POST">
+              <input
+                type="number"
+                hidden
+                name="productId"
+                value="<%= prod.id %>"
+              />
+              <input
+                type="text"
+                hidden
+                name="productName"
+                value="<%= prod.name %>"
+              />
+              <input
+                type="number"
+                hidden
+                name="productPrice"
+                value="<%= prod.price %>"
+              />
+              <button type="submit" id="checkout-button">Checkout</button>
+            </form>
           </li>
           <% } %>
         </ul>
